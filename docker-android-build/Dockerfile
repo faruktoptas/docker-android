@@ -29,7 +29,8 @@ RUN rm android-sdk.zip
 RUN sdkmanager "emulator" "tools" "platform-tools"
 RUN yes | sdkmanager \
 	"build-tools;24.0.3" \
-	"build-tools;25.0.2"
+	"build-tools;25.0.2" \
+	"build-tools-28.0.3"
 RUN yes | sdkmanager \
     "extras;android;m2repository" \
     "extras;google;m2repository" \
@@ -39,7 +40,9 @@ RUN yes | sdkmanager \
     "platforms;android-15" \
     "platforms;android-21" \
     "platforms;android-22" \
-    "platforms;android-25"
+    "platforms;android-25" \
+    "platforms;android-29"
+    
 
 ##################
 # Android licenses
