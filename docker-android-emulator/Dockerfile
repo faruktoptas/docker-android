@@ -1,15 +1,16 @@
-FROM faruktoptas/docker-android-build:v1.1.0
+FROM faruktoptas/docker-android-build
 
 ##################
 # Install emulator images
 ##################
-RUN sdkmanager "system-images;android-21;google_apis;armeabi-v7a"
+RUN sdkmanager "system-images;android-25;google_apis;armeabi-v7a"
 
 ##################
 # Set mandatory environment variables
 ##################
 ENV ANDROID_EMULATOR_FORCE_32BIT=true
 ENV ANDROID_SDK_HOME=/root/.android/ 
+ENV ANDROID_SDK_ROOT=/opt/android-sdk
 
 COPY ui-tests-on-emulator.sh /usr/bin/ui-tests-on-emulator
 COPY run-ui-tests.sh /usr/bin/run-ui-tests
