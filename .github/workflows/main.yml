@@ -8,7 +8,7 @@ jobs:
     - name: Build and Publish Android Build Image
       uses: elgohr/Publish-Docker-Github-Action@2.7
       with:
-        name: vgaidarji/docker-android-build
+        name: faruktoptas/docker-android-build
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         workdir: docker-android-build
@@ -16,7 +16,7 @@ jobs:
     - name: Build and Publish Android Emulator Image
       uses: elgohr/Publish-Docker-Github-Action@2.7
       with:
-        name: vgaidarji/docker-android-emulator
+        name: faruktoptas/docker-android-emulator
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         workdir: docker-android-emulator
